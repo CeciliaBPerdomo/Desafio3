@@ -23,7 +23,7 @@ class container {
             throw new Error(error);
         }  
     } 
-   
+    
    }
 
    module.exports = container;

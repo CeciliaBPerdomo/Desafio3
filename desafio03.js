@@ -22,7 +22,10 @@ app.get('/productos', async (req, res) => {
 })
 
 app.get('/productosRandom', async (req, res) => {
-    res.send(await productosDisp[Math.round(Math.random() * ((productosDisp().length) + 1))]);
+    let itemRandom = await productosDisp(Math.floor(Math.random()*(productosDisp.length)))
+    //let itemRandom = await productosDisp()
+    //let item = itemRandom(Math.floor(Math.random()*(itemRandom.length)))
+    res.send(itemRandom);
 })
 
 const PORT = 8080;
