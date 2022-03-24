@@ -1,11 +1,11 @@
-const container = require('./desafio03');
+const container = require('./contenedor');
 const productos = require('./productos');
 
 const nuevoContenedor = new container('./productos.txt');
 //nuevoContenedor.escribir(JSON.stringify(productos));
 
-const productosDisp = () => {
-    console.log(nuevoContenedor.leer());
+const productosDisp = async () => {
+    return await nuevoContenedor.leer();
 }
 
 module.exports = productosDisp; 
