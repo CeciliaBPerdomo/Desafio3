@@ -21,7 +21,7 @@ app.get('/productos', async (req, res) => {
 
 })
 
-app.get('/productoRandom', async (req, res) => {
+app.get('/productosRandom', async (req, res) => {
     res.send(await productosDisp[Math.round(Math.random() * ((productosDisp().length) + 1))]);
 })
 
